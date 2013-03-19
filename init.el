@@ -101,4 +101,4 @@
  )
 
 ;; optionally, load local settings (e.g. font size)
-(load "local.el" nil)
+(load "local.el" t)
