@@ -1,0 +1,6 @@
+[submodule "yaml-mode"]
+	path = yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "smart-tab"]
+	path = smart-tab
+	url = https://github.com/genehack/smart-tab.git
