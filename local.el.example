@@ -1,0 +1,18 @@
+;; Optional local settings.
+
+;; To use these, copy this file to local.el (or just copy the stuff you want)
+
+;;
+;; configure font & frame size
+;;
+(defun setup-frame (frame)
+  (set-frame-parameter
+   frame 'font
+   "-apple-Monaco-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
+  (if (window-system)
+      (set-frame-height frame 60)))
+
+;; Fontify current frame
+(setup-frame (selected-frame))
+;; Fontify any future frames
+(push 'setup-frame after-make-frame-functions)

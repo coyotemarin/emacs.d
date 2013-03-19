@@ -24,21 +24,6 @@
 (delete-selection-mode 1)
 
 ;;
-;; configure font & frame size
-;;
-(defun setup-frame (frame)
-  (set-frame-parameter
-   frame 'font
-   "-apple-Monaco-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
-  (if (window-system)
-      (set-frame-height frame 60)))
-
-;; Fontify current frame
-(setup-frame (selected-frame))
-;; Fontify any future frames
-(push 'setup-frame after-make-frame-functions)
-
-;;
 ;; use python-mode.el
 ;;
 (autoload 'python-mode "python-mode" "Python Mode." t)
@@ -114,3 +99,6 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
+
+;; optionally, load local settings (e.g. font size)
+(load "local.el" nil)
