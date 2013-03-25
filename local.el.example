@@ -10,7 +10,7 @@
    frame 'font
    "-apple-Monaco-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
   (if (window-system)
-      (set-frame-height frame 60)))
+      (set-frame-height frame 43)))
 
 ;; Fontify current frame
 (setup-frame (selected-frame))
