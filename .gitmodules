@@ -4,3 +4,6 @@
 [submodule "smart-tab"]
 	path = smart-tab
 	url = https://github.com/genehack/smart-tab.git
+[submodule "coffee-mode"]
+	path = coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git
