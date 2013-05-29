@@ -93,11 +93,12 @@
 
 ;; coffeescript mode
 (require 'coffee-mode)
-(add-to-list 'auto-mode-alist '("\\.coffee$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+
+(setq coffee-tab-width 2)
 
 (add-hook 'coffee-mode-hook (lambda () (whitespace-mode 1)))
 (add-hook 'coffee-mode-hook (lambda () (column-number-mode 1)))
-(add-hook 'coffee-mode-hook (lambda () (setq coffee-tab-width 2)))
 
 (add-hook 'coffee-mode-hook
 	  (lambda () (setq whitespace-line-column 79
