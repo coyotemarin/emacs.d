@@ -113,5 +113,9 @@
 			     whitespace-style
 			     '(face tabs trailing lines-tail))))
 
+(add-hook 'js-mode-hook
+	  (lambda () (progn
+		       (set-variable 'indent-tabs-mode nil))))
+
 ;; optionally, load local settings (e.g. font size)
 (load "local.el" t)
