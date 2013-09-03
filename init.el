@@ -105,6 +105,13 @@
 			     whitespace-style
 			     '(face tabs trailing lines-tail))))
 
+(add-hook 'js-mode-hook (lambda () (whitespace-mode 1)))
+(add-hook 'js-mode-hook (lambda () (column-number-mode 1)))
+
+(add-hook 'js-mode-hook
+	  (lambda () (setq whitespace-line-column 79
+			     whitespace-style
+			     '(face tabs trailing lines-tail))))
 
 ;; optionally, load local settings (e.g. font size)
 (load "local.el" t)
