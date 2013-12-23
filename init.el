@@ -83,6 +83,18 @@
 (let ((default-directory "~/.emacs.d/"))
       (normal-top-level-add-subdirs-to-load-path))
 
+;; Prevent Extraneous Tabs
+(setq-default indent-tabs-mode nil)
+
+;; whitespace mode
+(global-whitespace-mode 1)
+(setq-default whitespace-line-column 79
+              whitespace-style '(face tabs trailing lines-tail))
+
+
+;; column number mode
+(column-number-mode 1)
+
 ;; smart tab completion
 (require 'smart-tab)
 (global-smart-tab-mode 1)
@@ -96,26 +108,6 @@
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 
 (setq coffee-tab-width 2)
-
-(add-hook 'coffee-mode-hook (lambda () (whitespace-mode 1)))
-(add-hook 'coffee-mode-hook (lambda () (column-number-mode 1)))
-
-(add-hook 'coffee-mode-hook
-	  (lambda () (setq whitespace-line-column 79
-			     whitespace-style
-			     '(face tabs trailing lines-tail))))
-
-(add-hook 'js-mode-hook (lambda () (whitespace-mode 1)))
-(add-hook 'js-mode-hook (lambda () (column-number-mode 1)))
-
-(add-hook 'js-mode-hook
-	  (lambda () (setq whitespace-line-column 79
-			     whitespace-style
-			     '(face tabs trailing lines-tail))))
-
-(add-hook 'js-mode-hook
-	  (lambda () (progn
-		       (set-variable 'indent-tabs-mode nil))))
 
 ;; optionally, load local settings (e.g. font size)
 (load "local.el" t)
