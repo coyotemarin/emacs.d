@@ -117,5 +117,17 @@
 	  (lambda () (progn
 		       (set-variable 'indent-tabs-mode nil))))
 
+
+(add-hook 'rst-mode-hook (lambda () (whitespace-mode 1)))
+(add-hook 'rst-mode-hook (lambda () (column-number-mode 1)))
+
+(add-hook 'rst-mode-hook
+	  (lambda () (setq whitespace-line-column 79
+			     whitespace-style
+			     '(face tabs trailing lines-tail))))
+
+
+
 ;; optionally, load local settings (e.g. font size)
 (load "local.el" t)
+(put 'downcase-region 'disabled nil)
