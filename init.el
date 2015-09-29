@@ -19,10 +19,6 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
-;; disable X selection copy-paste semantics
-(setq mouse-drag-copy-region nil)
-(delete-selection-mode 1)
-
 ;;
 ;; use python-mode.el
 ;;
@@ -108,6 +104,10 @@
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 
 (setq coffee-tab-width 2)
+
+;; disable X selection copy-paste semantics
+(setq mouse-drag-copy-region nil)
+(delete-selection-mode 1)
 
 ;; optionally, load local settings (e.g. font size)
 (load "local.el" t)
