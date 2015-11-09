@@ -7,3 +7,6 @@
 [submodule "coffee-mode"]
 	path = coffee-mode
 	url = https://github.com/defunkt/coffee-mode.git
+[submodule "scss-mode"]
+	path = scss-mode
+	url = git@github.com:antonj/scss-mode.git

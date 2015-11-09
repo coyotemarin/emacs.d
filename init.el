@@ -126,6 +126,9 @@
 			     whitespace-style
 			     '(face tabs trailing lines-tail))))
 
+;; scss mode
+(require 'scss-mode)
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
 
 ;; optionally, load local settings (e.g. font size)
