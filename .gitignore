@@ -2,4 +2,4 @@
 auto-save-list
 backups
 history
-/local.el
+/lisp/local.el
