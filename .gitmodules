@@ -10,3 +10,6 @@
 [submodule "scss-mode"]
 	path = scss-mode
 	url = git@github.com:antonj/scss-mode.git
+[submodule "emacs-pug-mode"]
+	path = emacs-pug-mode
+	url = https://github.com/hlissner/emacs-pug-mode.git

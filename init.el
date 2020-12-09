@@ -49,6 +49,7 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+
 (defun delete-trailing-blank-lines ()
   (interactive)
   (save-excursion
@@ -121,6 +122,11 @@
 ;; scss mode
 (require 'scss-mode)
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
+
+;; pug/jade mode
+(require 'pug-mode)
+(add-to-list 'auto-mode-alist '("\\.jade$" . pug-mode))
 
 
 ;; optionally, load local settings (e.g. font size)
