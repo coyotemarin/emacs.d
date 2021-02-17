@@ -126,9 +126,24 @@
 
 ;; pug/jade mode
 (require 'pug-mode)
-(add-to-list 'auto-mode-alist '("\\.jade$" . pug-mode))
+(add-to-list 'auto-mode-alist '("\\.(jade|pug)$" . pug-mode))
 
+; indent css 2 spaces
+(setq css-indent-offset 2)
+
+; indent js 2 spaces, not 4
+(setq js-indent-level 2)
+
+; indent pug templates 2 spaces, not 4
+(setq pug-tab-width 2)
 
 ;; optionally, load local settings (e.g. font size)
 (load "local.el" t)
 (put 'downcase-region 'disabled nil)
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
